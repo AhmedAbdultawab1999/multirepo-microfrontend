@@ -1,0 +1,81 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #1B1B2F; /* Deep dark blue */
+    color: #EAEAEA; /* Off-white text for contrast */
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+li {
+    list-style-type: none;
+    color: #EAEAEA; /* Off-white text for readability */
+}
+
+a {
+    text-decoration: none;
+    color: #EAEAEA; /* Off-white for text contrast */
+    margin: 5px;
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth color change and scale effect */
+}
+
+a:hover {
+    color: #FFC947; /* Bright yellow on hover for better contrast */
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.header-logo {
+    flex: 15%;
+    padding: 10px;
+}
+
+.header-menu {
+    flex: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-perfil {
+    flex: 25%;
+    display: flex;
+    justify-content: flex-end;
+    
+    li {
+        margin: 0 10px; /* More spacing between icons */
+    }
+
+    a:hover mat-icon {
+        color: #FFC947; /* Bright yellow hover effect for icons */
+        transform: scale(1.1); /* Slight scaling effect on icon hover */
+    }
+}
+
+mat-icon {
+    color: #EAEAEA; /* Off-white icons */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover */
+}
+
+/* Additional dark mode improvements */
+.header a {
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #162447; /* Dark blue background on hover */
+    color: #FFC947; /* Contrast yellow text */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .header-logo, .header-menu, .header-perfil {
+        flex: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
